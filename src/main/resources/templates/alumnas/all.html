@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+<section class="container">
+    <h1 th:text="${nombre}"></h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>nombre</th>
+            <th>apellidos</th>
+            <th>edad</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="alumna: ${alumnas}">
+            <th scope="row" th:text="${alumna.id}"></th>
+            <td th:text="${alumna.nombre}"></td>
+            <td th:text="${alumna.apellidos}"></td>
+            <td th:text="${alumna.edad}"></td>
+            <td th:text="${alumna.pais_origen}"></td>
+            <td th:text="${alumna.nivel_de_estudios}"></td>
+            <td th:text="${alumna.direccion}"></td>
+            <td th:text="${alumna.promocionF5}"></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
