@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/head.html">
+
+</head>
+
+<body>
+<header  th:replace="fragments/header.html"></header>
+<section class="container">
+    <form  th:action="@{/alumnas/new}" th:object="${alumna}" method="post">
+        <div class="form-group">
+            <input type="hidden" th:field="*{id}">
+            <label class="col-md2" for="nombre">Nombre</label>
+            <input  th:field="*{nombre}" type="text" class="col-md6 form-control form-control-sm" id="nombre"
+                   placeholder="Enter nombre">
+        </div>
+        <div class="form-group">
+            <label class="col-md2" for="apellidos">Apellidos</label>
+            <input th:field="*{apellidos}" type="text" class="col-md6 form-control form-control-sm" id="apellidos"
+                   placeholder="Enter apellidos">
+        </div>
+        <div class="form-group">
+            <label class="col-md2" for="edad">Edad</label>
+            <input th:field="*{edad}" type="text" class="col-md6 form-control form-control-sm" id="edad"
+                   placeholder="Enter edad">
+        </div>
+        <div class="form-group">
+            <label class="col-md2" for="pais_origen">Pais de origen</label>
+            <input th:field="*{pais_origen}" type="text" class="col-md6 form-control form-control-sm" id="pais_origen"
+                   placeholder="Enter pais origen">
+        </div>
+        <div class="form-group">
+            <label class="col-md2" for="nivel_de_estudios">Nivel de estudios</label>
+            <input th:field="*{nivel_de_estudios}" type="text" class="col-md6 form-control form-control-sm" id="nivel_de_estudios"
+                   placeholder="Enter nivel de estudios">
+        </div>
+        <div class="form-group">
+            <label class="col-md2" for="direccion">Dirección</label>
+            <input th:field="*{direccion}" type="text" class="col-md6 form-control form-control-sm" id="direccion"
+                   placeholder="Enter direccion">
+        </div>
+        <div class="form-group">
+            <label class="col-md2" for="promocionF5">Promocion F5</label>
+            <input th:field="*{promocionF5}" type="text" class="col-md6 form-control form-control-sm" id="promocionF5"
+                   placeholder="Enter promocionF5">
+        </div>
+        <div class="card-footer ">
+            <input type="submit" class="btn btn-primary btn-sm" value="Save"/>
+        </div>
+    </form>
+</section>
+<footer  th:replace="fragments/footer.html"> </footer>
+</body>
+</html>
