@@ -10,14 +10,16 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>Edad</th>
-            <th>Pais de origen</th>
-            <th>Nivel de estudios</th>
-            <th>Dirección</th>
-            <th>Promoción F5</th>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Pais de origen</th>
+            <th scope="col">Nivel de estudios</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Promoción F5</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
         </tr>
         </thead>
         <tbody>
@@ -30,6 +32,12 @@
             <td th:text="${alumna.nivel_de_estudios}"></td>
             <td th:text="${alumna.direccion}"></td>
             <td th:text="${alumna.promocionF5}"></td>
+            <td>
+                <a class="btn btn-success btn-sm" th:href="'/alumnas/edit/'+${alumna.id}">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-success btn-sm btn-danger" th:href="'/alumnas/eliminar/'+${alumna.id}">Eliminar</a>
+            </td>
         </tr>
         </tbody>
     </table>
